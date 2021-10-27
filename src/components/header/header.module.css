@@ -1,0 +1,6 @@
+.headerContainer {
+  padding: 1rem;
+}
+.headerContainer > h1 {
+  font-size: 3rem;
+}

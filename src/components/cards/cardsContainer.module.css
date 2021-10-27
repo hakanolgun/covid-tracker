@@ -4,7 +4,39 @@
   align-items: center;
   gap: 1rem;
 }
+.cardsContainer > div:first-child {
+  background-color: #afd6fc;
+}
+.cardsContainer > div:nth-child(2) {
+  background-color: #dcf5e1;
+}
+.cardsContainer > div:nth-child(3) {
+  background-color: #f3d5d5;
+}
+.cardsContainer > div:last-child {
+  background-color: #f3e0c8;
+}
+
 .cardDiv {
-  border: 1px solid black;
   border-radius: 10px;
+  padding: 1rem;
+}
+
+.title {
+  font-size: 1.2rem;
+  font-weight: bolder;
+}
+.number {
+  font-size: 1.6rem;
+  font-weight: bold;
+}
+
+@media screen and (max-width: 845px) {
+  .cardsContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+    align-items: stretch;
+    gap: initial;
+  }
 }

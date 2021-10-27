@@ -34,32 +34,30 @@ export default function CardsContainer() {
       {data !== null && (
         <div className={styles.cardsContainer}>
           <div className={styles.cardDiv}>
-            <p>Infected</p>
-            <p>{data.confirmed.value}</p>
+            <p className={styles.title}>Infected</p>
+            <p className={styles.number}>{data.confirmed.value}</p>
             <p>Last Updated:</p>
-            <p>{data.lastUpdate}</p>
-            <p>Number of active cases of Covid-19</p>
+            <em>{data.lastUpdate}</em>
           </div>
           <div className={styles.cardDiv}>
-            <p>Recovered</p>
-            <p>{data.recovered.value}</p>
+            <p className={styles.title}>Recovered</p>
+            <p className={styles.number}>{data.recovered.value}</p>
             <p>Last Updated:</p>
-            <p>{data.lastUpdate}</p>
-            <p>Number of active cases of Covid-19</p>
+            <em>{data.lastUpdate}</em>
           </div>
           <div className={styles.cardDiv}>
-            <p>Deaths</p>
-            <p>{data.deaths.value}</p>
+            <p className={styles.title}>Deaths</p>
+            <p className={styles.number}>{data.deaths.value}</p>
             <p>Last Updated:</p>
-            <p>{data.lastUpdate}</p>
-            <p>Number of active cases of Covid-19</p>
+            <em>{data.lastUpdate}</em>
           </div>
           <div className={styles.cardDiv}>
-            <p>Active</p>
-            <p>41,819,232</p>
+            <p className={styles.title}>Active</p>
+            <p className={styles.number}>
+              {data.confirmed.value - data.recovered.value - data.deaths.value}
+            </p>
             <p>Last Updated:</p>
-            <p>{data.lastUpdate}</p>
-            <p>Number of active cases of Covid-19</p>
+            <em>{data.lastUpdate}</em>
           </div>
         </div>
       )}
