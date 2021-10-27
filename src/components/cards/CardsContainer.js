@@ -13,21 +13,17 @@ export default function CardsContainer() {
           .then((response) => response.json())
           .then((newData) => {
             setData(newData);
-            console.log("effectici data", newData);
           });
       } else {
         await fetch(`https://covid19.mathdro.id/api/countries/${countryValue}`)
           .then((response) => response.json())
           .then((newData) => {
             setData(newData);
-            console.log("effectici data", newData);
           });
       }
     }
     fetchData();
   }, [countryValue]);
-
-  console.log(data);
 
   return (
     <div>
@@ -35,29 +31,43 @@ export default function CardsContainer() {
         <div className={styles.cardsContainer}>
           <div className={styles.cardDiv}>
             <p className={styles.title}>Infected</p>
-            <p className={styles.number}>{data.confirmed.value}</p>
+            <p className={styles.number}>
+              {data.confirmed.value
+                .toString()
+                .replace(/\B(?=(\d{3})+(?!\d))/g, " ")}
+            </p>
             <p>Last Updated:</p>
-            <em>{data.lastUpdate}</em>
+            <em>{new Date(data.lastUpdate).toLocaleString()}</em>
           </div>
           <div className={styles.cardDiv}>
             <p className={styles.title}>Recovered</p>
-            <p className={styles.number}>{data.recovered.value}</p>
+            <p className={styles.number}>
+              {data.recovered.value
+                .toString()
+                .replace(/\B(?=(\d{3})+(?!\d))/g, " ")}
+            </p>
             <p>Last Updated:</p>
-            <em>{data.lastUpdate}</em>
+            <em>{new Date(data.lastUpdate).toLocaleString()}</em>
           </div>
           <div className={styles.cardDiv}>
             <p className={styles.title}>Deaths</p>
-            <p className={styles.number}>{data.deaths.value}</p>
+            <p className={styles.number}>
+              {data.deaths.value
+                .toString()
+                .replace(/\B(?=(\d{3})+(?!\d))/g, " ")}
+            </p>
             <p>Last Updated:</p>
-            <em>{data.lastUpdate}</em>
+            <em>{new Date(data.lastUpdate).toLocaleString()}</em>
           </div>
           <div className={styles.cardDiv}>
             <p className={styles.title}>Active</p>
             <p className={styles.number}>
-              {data.confirmed.value - data.recovered.value - data.deaths.value}
+              {(data.confirmed.value - data.recovered.value - data.deaths.value)
+                .toString()
+                .replace(/\B(?=(\d{3})+(?!\d))/g, " ")}
             </p>
             <p>Last Updated:</p>
-            <em>{data.lastUpdate}</em>
+            <em>{new Date(data.lastUpdate).toLocaleString()}</em>
           </div>
         </div>
       )}
