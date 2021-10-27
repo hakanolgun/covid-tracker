@@ -1,0 +1,10 @@
+.cardsContainer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 1rem;
+}
+.cardDiv {
+  border: 1px solid black;
+  border-radius: 10px;
+}
