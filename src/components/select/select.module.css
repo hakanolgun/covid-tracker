@@ -39,7 +39,7 @@ select::-ms-expand {
   background: #5c6664;
   overflow: hidden;
   border-radius: 0.25em;
-  background-image: url("/src/arrow2son.png");
+  background-image: url("/src/arrow.png");
   background-repeat: no-repeat;
   background-size: 3.3rem;
   background-position: 269px;
