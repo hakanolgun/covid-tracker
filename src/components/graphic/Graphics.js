@@ -13,7 +13,7 @@ export default function Graphics() {
             labels: ["infected", "deaths", "active"],
             datasets: [
               {
-                label: "current state in selected country",
+                label: "data",
                 data: [
                   storedata.confirmed.value,
                   storedata.deaths.value,
@@ -25,7 +25,25 @@ export default function Graphics() {
           }}
           width={300}
           height={300}
-          options={{ maintainAspectRatio: false }}
+          options={{
+            plugins: {
+              title: {
+                display: true,
+                text: "Current State In Selected Country",
+              },
+              legend: {
+                display: false,
+              },
+              tooltip: {
+                callbacks: {
+                  label: function (tooltipItem) {
+                    return tooltipItem.yLabel;
+                  },
+                },
+              },
+            },
+            maintainAspectRatio: false,
+          }}
         />
       )}
     </div>
