@@ -8,10 +8,7 @@
   background-color: #afd6fc;
 }
 .cardsContainer > div:nth-child(2) {
-  background-color: #dcf5e1;
-}
-.cardsContainer > div:nth-child(3) {
-  background-color: #d8aaaa;
+  background-color: #b65858;
 }
 .cardsContainer > div:last-child {
   background-color: #f3e0c8;
@@ -19,7 +16,7 @@
 
 .cardDiv {
   border-radius: 10px;
-  padding: 0.5rem 1rem 1rem 1rem;
+  padding: 1rem 2rem 2rem 2rem;
 }
 
 .title {
@@ -38,7 +35,7 @@
     align-items: stretch;
     gap: initial;
   }
-  .cardDiv{
+  .cardDiv {
     margin: 0.5rem;
   }
 }

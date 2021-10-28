@@ -27,16 +27,6 @@ export default function CardsContainer() {
             <em>{new Date(data.lastUpdate).toLocaleString()}</em>
           </div>
           <div className={styles.cardDiv}>
-            <p className={styles.title}>Recovered</p>
-            <p className={styles.number}>
-              {data.recovered.value
-                .toString()
-                .replace(/\B(?=(\d{3})+(?!\d))/g, " ")}
-            </p>
-            <p>Last Updated:</p>
-            <em>{new Date(data.lastUpdate).toLocaleString()}</em>
-          </div>
-          <div className={styles.cardDiv}>
             <p className={styles.title}>Deaths</p>
             <p className={styles.number}>
               {data.deaths.value
@@ -49,7 +39,7 @@ export default function CardsContainer() {
           <div className={styles.cardDiv}>
             <p className={styles.title}>Active</p>
             <p className={styles.number}>
-              {(data.confirmed.value - data.recovered.value - data.deaths.value)
+              {(data.confirmed.value - data.deaths.value)
                 .toString()
                 .replace(/\B(?=(\d{3})+(?!\d))/g, " ")}
             </p>

@@ -12,9 +12,10 @@ export default function Select() {
       <select
         name="countries"
         id="countries"
+        defaultValue=""
         onChange={(e) => dispatch(selectCountry(e.target.value))}
       >
-        <option value="" key="globalitem" selected>
+        <option value="" key="globalitem">
           Global
         </option>
         {countries.map((item) => (

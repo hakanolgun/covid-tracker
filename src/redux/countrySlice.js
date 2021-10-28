@@ -20,6 +20,14 @@ export const getDataAsync = createAsyncThunk(
   }
 );
 
+export const getGlobalDays = createAsyncThunk(
+  "country/getGlobalDays",
+  async () => {
+    const res = await fetch(`https://covid19.mathdro.id/api/daily`);
+    return await res.json();
+  }
+);
+
 export const CountrySlice = createSlice({
   name: "country",
   initialState: {
@@ -27,6 +35,8 @@ export const CountrySlice = createSlice({
     countries,
     isLoading: false,
     data: null,
+    isGlobal: false,
+    globalData: null,
   },
   reducers: {
     selectCountry: (state, action) => {
@@ -34,6 +44,7 @@ export const CountrySlice = createSlice({
     },
   },
   extraReducers: {
+    // get Country Data
     [getDataAsync.pending]: (state, action) => {
       state.isLoading = true;
     },
@@ -44,6 +55,17 @@ export const CountrySlice = createSlice({
 
     [getDataAsync.rejected]: (state, action) => {
       state.isLoading = false;
+    },
+    // get Global Daily
+    [getGlobalDays.pending]: (state, action) => {
+      state.isGlobal = true;
+    },
+    [getGlobalDays.fulfilled]: (state, action) => {
+      state.globalData = action.payload;
+      state.isGlobal = false;
+    },
+    [getGlobalDays.rejected]: (state, action) => {
+      state.isGlobal = false;
     },
   },
 });
