@@ -42,16 +42,20 @@ export default function LineChart() {
               },
             ],
           }}
-          options={{
-            title: {
-              display: true,
-              text: "Global Daily Cases",
-              fontSize: 25,
-            },
-          }}
           width={300}
           height={400}
-          options={{ maintainAspectRatio: false }}
+          options={{
+            legend: {
+              display: true,
+            },
+            plugins: {
+              title: {
+                display: true,
+                text: "Daily Global Cases",
+              },
+            },
+            maintainAspectRatio: false,
+          }}
         />
       )}
     </div>
