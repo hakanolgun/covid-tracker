@@ -1,6 +1,10 @@
 .headerContainer {
   padding: 1rem;
+  background-color: #5c6664;
+  color: whitesmoke;
+  box-shadow: 5px 5px 7px #5c6664;
 }
 .headerContainer > h1 {
   font-size: 3rem;
+  color: whitesmoke;
 }

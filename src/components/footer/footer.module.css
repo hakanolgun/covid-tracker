@@ -1,0 +1,13 @@
+.footerContainer {
+  background-color: #5c6664;
+}
+.githublink {
+  text-decoration: none;
+  color: white;
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+.githublink:hover {
+  color: #9ec8f3;
+  text-decoration: underline;
+}

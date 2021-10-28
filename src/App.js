@@ -1,5 +1,6 @@
 import "./App.css";
 import CardsContainer from "./components/cards/CardsContainer";
+import Footer from "./components/footer/Footer";
 import Graphics from "./components/graphic/Graphics";
 import LineChart from "./components/graphic/LineChart";
 import Header from "./components/header/Header";
@@ -13,6 +14,7 @@ function App() {
       <CardsContainer />
       <Graphics />
       <LineChart />
+      <Footer />
     </div>
   );
 }
