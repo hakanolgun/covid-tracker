@@ -50,7 +50,7 @@ export default function LineChart() {
             },
           }}
           width={300}
-          height={300}
+          height={400}
           options={{ maintainAspectRatio: false }}
         />
       )}

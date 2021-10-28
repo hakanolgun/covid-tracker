@@ -10,16 +10,17 @@ export default function Select() {
   return (
     <div className={styles.selectContainer}>
       <select
+        className={styles.select}
         name="countries"
         id="countries"
         defaultValue=""
         onChange={(e) => dispatch(selectCountry(e.target.value))}
       >
-        <option value="" key="globalitem">
+        <option className={styles.option} value="" key="globalitem">
           Global
         </option>
         {countries.map((item) => (
-          <option value={item.name} key={item.name}>
+          <option value={item.name} key={item.name} className={styles.option}>
             {item.name}
           </option>
         ))}

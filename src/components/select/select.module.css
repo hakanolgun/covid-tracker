@@ -1,0 +1,46 @@
+.selectContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.select {
+  font-family: "Open Sans", sans-serif;
+  font-weight: bolder;
+  max-width: 320px;
+}
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  outline: 0;
+  box-shadow: none;
+  border: 0 !important;
+  background: #5c6664;
+  background-image: none;
+  flex: 1;
+  padding: 0 0.5em;
+  color: #fff;
+  cursor: pointer;
+  font-size: 1em;
+  font-family: "Open Sans", sans-serif;
+}
+select::-ms-expand {
+  display: none;
+}
+.select {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 20em;
+  height: 3em;
+  line-height: 3;
+  background: #5c6664;
+  overflow: hidden;
+  border-radius: 0.25em;
+  background-image: url("/src/arrow2son.png");
+  background-repeat: no-repeat;
+  background-size: 3.3rem;
+  background-position: 269px;
+}
