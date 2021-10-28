@@ -1,29 +1,18 @@
 import styles from "./cardsContainer.module.css";
-import { useEffect, useState } from "react";
-import { useSelector } from "react-redux";
+import { useEffect } from "react";
+import { useSelector, useDispatch } from "react-redux";
+import { getDataAsync } from "../../redux/countrySlice";
 
 export default function CardsContainer() {
+  const dispatch = useDispatch();
   const countryValue = useSelector((state) => state.country.countryValue);
-  const [data, setData] = useState(null);
+  const data = useSelector((state) => state.country.data);
+
+  console.log(data);
 
   useEffect(() => {
-    async function fetchData() {
-      if (countryValue === "") {
-        await fetch(`https://covid19.mathdro.id/api`)
-          .then((response) => response.json())
-          .then((newData) => {
-            setData(newData);
-          });
-      } else {
-        await fetch(`https://covid19.mathdro.id/api/countries/${countryValue}`)
-          .then((response) => response.json())
-          .then((newData) => {
-            setData(newData);
-          });
-      }
-    }
-    fetchData();
-  }, [countryValue]);
+    dispatch(getDataAsync(countryValue));
+  }, [dispatch, countryValue]);
 
   return (
     <div>
