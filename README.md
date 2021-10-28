@@ -1,5 +1,7 @@
 # Covid-19 Tracker App
 
+## [see live](covid-tracker-hakan.netlify.app)
+
 <img src="./src/covid-project.png" alt="screenshot" width="100%" />
 
 ## Tools
