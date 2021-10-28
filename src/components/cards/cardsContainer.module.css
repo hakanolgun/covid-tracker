@@ -3,21 +3,33 @@
   justify-content: center;
   align-items: center;
   gap: 2rem;
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
 }
 .cardsContainer > div:first-child {
-  background-color: #afd6fc;
+  color: #2586e7;
 }
 .cardsContainer > div:nth-child(2) {
-  background-color: #b65858;
+  color: #a30000;
 }
 .cardsContainer > div:last-child {
-  background-color: #f3e0c8;
+  color: #c26b00;
 }
 
 .cardDiv {
+  background-color: whitesmoke;
   border-radius: 10px;
-  padding: 1rem 2rem 2rem 2rem;
+  padding: 1rem 2.5rem 3rem 2.5rem;
+  box-shadow: -10px -10px 15px #c7c4c4, -10px -10px 15px #fff;
+}
+.cardDiv:hover {
+  cursor: pointer;
+  box-shadow: inset -10px -10px 15px #c7c4c4, inset -10px -10px 15px #fff;
+}
+.cardDiv > p:first-child,
+p:nth-child(2) {
+  padding: 0.75rem 1rem;
+  border-radius: 10px;
+  box-shadow: inset 5px 5px 5px #c7c4c4, inset -5px -5px 5px #fff;
 }
 
 .title {
@@ -29,14 +41,26 @@
   font-weight: bold;
 }
 
+.cardDiv em {
+  display: block;
+  margin-top: 1rem;
+}
 @media screen and (max-width: 845px) {
   .cardsContainer {
     flex-direction: column;
     justify-content: stretch;
     align-items: stretch;
-    gap: initial;
+    gap: 2rem;
   }
   .cardDiv {
-    margin: 0.5rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    padding: 0.75rem 2rem 2.5rem 2rem;
+  }
+  .cardDiv > p:first-child,
+  p:nth-child(2) {
+    padding: 0.75rem 0.75rem;
+    border-radius: 10px;
+    box-shadow: inset 5px 5px 5px #c7c4c4, inset -5px -5px 5px #fff;
   }
 }
