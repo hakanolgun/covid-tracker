@@ -1,4 +1,4 @@
-# Markdown Preview App
+# Covid-19 Tracker App
 
 <img src="./src/covid-project.png" alt="screenshot" width="100%" />
 
@@ -8,6 +8,7 @@
 - Redux
 - Thunk
 - ChartJS
+- Mathdroid(Covid-19-Api)
 
 ## How to use
 
