@@ -1,6 +1,9 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import countries from "./data/countries";
 
+// fetch işleminde state'de bulunan bir veriyi kullanamak için
+// onu arrow function içine parametre olarak aldım
+// sonra kullanacağım komponentt üzerinden vereceğim
 export const getDataAsync = createAsyncThunk(
   "country/getDataAsync",
   async (countryValue) => {

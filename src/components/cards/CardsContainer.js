@@ -8,8 +8,6 @@ export default function CardsContainer() {
   const countryValue = useSelector((state) => state.country.countryValue);
   const data = useSelector((state) => state.country.data);
 
-  console.log(data);
-
   useEffect(() => {
     dispatch(getDataAsync(countryValue));
   }, [dispatch, countryValue]);
