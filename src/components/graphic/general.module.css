@@ -1,5 +1,8 @@
 .generalContainer {
   max-width: 920px;
+  margin: 1rem;
   margin: 0 auto;
-  padding: 0.5rem;
+}
+.generalContainer > * {
+  margin: 1.5rem;
 }
