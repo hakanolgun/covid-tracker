@@ -1,8 +1,8 @@
 .cardsContainer {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
-  gap: 1rem;
+  gap: 2rem;
 }
 .cardsContainer > div:first-child {
   background-color: #afd6fc;
@@ -37,5 +37,8 @@
     justify-content: stretch;
     align-items: stretch;
     gap: initial;
+  }
+  .cardDiv{
+    margin: 0.5rem;
   }
 }
